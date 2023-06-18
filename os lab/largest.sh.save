@@ -1,0 +1,20 @@
+echo "enter the limit"
+read limit
+echo "enter the numbers"
+for((i=0;i<limit;i++))
+do
+read ${ar[i]}
+done
+for((i=0;i<limiit;i++))
+do
+for((j=0;j<limit;j++))
+do
+if((${ar[i]}>${ar[j]}))
+then
+swap=${ar[$i]}
+ar[$i]=${ar[$j]}
+ar[$j]=$temp
+fi
+done
+done
+echo "largest=${ar[0]}"
